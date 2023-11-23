@@ -1,4 +1,4 @@
-[200~# Application de Gestion des Malades - Clinique Kaayfdiou
+# Application de Gestion des Malades - Clinique Kaayfdiou
 
 Bienvenue dans l'application web de gestion des malades pour la clinique Kaayfdiou. Cette application a été développée en utilisant HTML, CSS, JavaScript, PHP, et Tailwind CSS.
 
@@ -42,22 +42,21 @@ L'application utilise une base de données avec les tables suivantes :
 
 ## Installation
 
-1. Clonez ce dépôt : 
-2. Configurez votre base de données dans le fichier 
+1. Clonez ce dépôt : `git clone https://github.com/votre-utilisateur/votre-projet.git`
+2. Configurez votre base de données dans le fichier `config.php`
 3. Déployez l'application sur un serveur PHP (par exemple, utilisez [XAMPP](https://www.apachefriends.org/index.html))
 
 ## Configuration de la Base de Données
 
-1. Importez le script SQL fourni dans le dossier  pour créer les tables nécessaires.
-2. Modifiez les paramètres de connexion à la base de données dans le fichier .
+1. Importez le script SQL fourni dans le dossier `database/` pour créer les tables nécessaires.
+2. Modifiez les paramètres de connexion à la base de données dans le fichier `config.php`.
 
 ## Contribuer
 
 1. Fork le projet
-2. Créez une branche pour votre fonctionnalité ()
-3. Committez vos modifications (On branch feature/NomDeLaFonctionnalite
-nothing to commit, working tree clean)
-4. Pushez la branche ()
+2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/NomDeLaFonctionnalite`)
+3. Committez vos modifications (`git commit -m 'Ajout de la fonctionnalité'`)
+4. Pushez la branche (`git push origin feature/NomDeLaFonctionnalite`)
 5. Créez un pull request
 
 ## Auteur
@@ -66,5 +65,3 @@ Souleymane Fall
 
 N'hésitez pas à contribuer et à suggérer des améliorations !
 
-~
-# kaayFadiou
