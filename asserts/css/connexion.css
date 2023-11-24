@@ -1,0 +1,7 @@
+.valuError{
+    border-color: red;
+}
+
+#eye {
+    cursor: pointer;
+}
