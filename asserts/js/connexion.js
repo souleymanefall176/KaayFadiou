@@ -2,35 +2,14 @@ const userName = document.getElementById("userName");
 const password = document.getElementById("password");
 const eye = document.getElementById("eye");
 
-/*Fonction qui verifie si longueur de chaine comprise entre min et max */
-const checkLength = (chaine, min, max) =>
-  chaine.length >= min && chaine.length <= max;
-
 /**Partie userName Debut */
 
 /*userName doit contenir des lettres majuscules, minuscules, des chiffres et des caracteres comme -, et _*/
-const checkChaine = function (chaine) {
+const checkUserName = function (chaine) {
   let maChaine = chaine.trim(); // Supprime les espaces en début et fin de chaîne
-  for (let i = 0; i < maChaine.length; i++) {
-    let car = maChaine[i];
-    if (
-      car === " " || // Ajout de cette condition pour vérifier les espaces
-      !(
-        (car.toUpperCase() >= "A" && car.toUpperCase() <= "Z") ||
-        (car >= "0" && car <= "9") ||
-        car == "-" ||
-        car == "_"
-      )
-    ) {
-      return false;
-    }
-  }
-  return true;
+  let regex = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z0-9]{3,30}$/;
+  return regex.test(maChaine);
 };
-
-/*Fonction qui verifie si userName rempli toutes les conditions */
-const checkUserName = (userName) =>
-  checkLength(userName, 3, 30) && checkChaine(userName);
 
 /*evenement declenche quand on quitte champ de saisie userName */
 userName.addEventListener("blur", (e) => {
@@ -50,8 +29,17 @@ userName.addEventListener("blur", (e) => {
 
 /**Partie password Debut */
 
-/*Fonction qui verifie si password contient entre 12 et 20 caracteres */
-const checkPassword = (password) => checkLength(password, 12, 20);
+const checkPassword = function (password) {
+  // let myPassword = password.trim(); // Supprime les espaces en début et fin de chaîne
+  /* devrait contenir au moins un chiffre
+   devrait contenir au moins une lettre minuscule
+   devrait contenir au moins une lettre majuscule
+   devrait contenir au moins un caractère spécial parmi @$!%*?&
+   devrait contenir uniquement des caractères spécifiés (lettres, chiffres, caractères spéciaux) et avoir une longueur d'au moins 8 caractères*/
+  let regex =
+    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[a-zA-Z0-9@$!%*?&]{8,}/;
+  return regex.test(password);
+};
 
 /*evenement declenche quand on quitte champ de saisie password */
 password.addEventListener("blur", (e) => {
@@ -61,7 +49,7 @@ password.addEventListener("blur", (e) => {
   ) {
     password.classList.add("valuError");
   } else if (
-    checkPassword(userName.value) &&
+    checkPassword(password.value) &&
     password.classList.contains("valuError")
   ) {
     password.classList.remove("valuError");

@@ -17,6 +17,4 @@ try {
 // echo "<br><br>Connecte a l'application";
 $sql = "SELECT login, password FROM users";
 $result = $conn->query($sql)->fetchAll();
-var_dump($result);
-
 ?>
