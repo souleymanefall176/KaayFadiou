@@ -42,7 +42,7 @@ L'application utilise une base de données avec les tables suivantes :
 
 ## Installation
 
-1. Clonez ce dépôt : `git clone https://github.com/votre-utilisateur/votre-projet.git`
+1. Clonez ce dépôt : `git clone https://github.com/souleymanefall176/kaayFadiou.git`
 2. Configurez votre base de données dans le fichier `config.php`
 3. Déployez l'application sur un serveur PHP (par exemple, utilisez [XAMPP](https://www.apachefriends.org/index.html))
 
