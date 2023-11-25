@@ -26,7 +26,7 @@ if (isset($_POST['login'])) {
         } else {
             session_start();
             $_SESSION['authentication_failed'] = true;
-            $dashboardPath = '../pages/connexion.php';
+            $dashboardPath = '../index.php';
             header('Location: ' . $dashboardPath);
         }
     } else {

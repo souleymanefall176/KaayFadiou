@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>connexion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../asserts/dist/style.css">
-    <link rel="stylesheet" href="../asserts/css/connexion.css">
-    <script type="module" src="../asserts/js/connexion.js"></script>
+    <link rel="stylesheet" href="asserts/dist/style.css">
+    <link rel="stylesheet" href="asserts/css/connexion.css">
+    <script type="module" src="asserts/js/connexion.js"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
         <?php
@@ -64,7 +64,7 @@
             <div class="md:w-1/2 px-&-">
                 <h2 id="titre" class="font-bold text-2xl text-[#3871A6]">Login</h2>
                 <p id="infos" class="text-sm  mt-4 text-[#3871A6] text-xs">Please enter your login information.</p>
-                <form action="../dao/authentification.php" method="post" class="flex flex-col gap-4">
+                <form action="dao/authentification.php" method="post" class="flex flex-col gap-4">
                     <input type="text" name="userName" placeholder="Username" id="userName" class="p-2 mt-8 rounded-xl border w-full" autocomplete="off">
                     <div class="relative">
                         <input type="password" name="password"
